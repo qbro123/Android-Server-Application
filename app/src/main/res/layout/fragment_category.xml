@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".fragments.CategoryFragment">
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_below="@+id/ss"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:background="@drawable/bg_note"
+                android:layout_margin="20dp"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/imgPill"
+                    android:layout_width="48dp"
+                    android:src="@drawable/ic_pill"
+                    android:layout_margin="10dp"
+                    android:layout_height="48dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:fontFamily="@font/semibold"
+                    android:textSize="20dp"
+                    android:textColor="#FFF"
+                    android:text="THUỐC KÊ ĐƠN"
+                    android:layout_toRightOf="@+id/imgPill"
+                    android:layout_height="wrap_content"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:background="@drawable/bg_note"
+                android:layout_marginHorizontal="20dp"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/imgPill1"
+                    android:layout_width="48dp"
+                    android:src="@drawable/ic_pills"
+                    android:layout_margin="10dp"
+                    android:layout_height="48dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:fontFamily="@font/semibold"
+                    android:textSize="20dp"
+                    android:textColor="#FFF"
+                    android:text="THUỐC KHÔNG KÊ ĐƠN"
+                    android:layout_toRightOf="@+id/imgPill1"
+                    android:layout_height="wrap_content"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:background="@drawable/bg_note"
+                android:layout_margin="20dp"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imgPill2"
+                    android:layout_width="48dp"
+                    android:src="@drawable/ic_hospital"
+                    android:layout_margin="10dp"
+                    android:layout_height="48dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:fontFamily="@font/semibold"
+                    android:textColor="#FFF"
+                    android:textSize="20dp"
+                    android:text="CƠ SỞ SẢN XUẤT"
+                    android:layout_toRightOf="@+id/imgPill2"
+                    android:layout_height="wrap_content"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:background="@drawable/bg_note"
+                android:layout_marginHorizontal="20dp"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imgPill3"
+                    android:layout_width="48dp"
+                    android:src="@drawable/ic_first_aid"
+                    android:layout_margin="10dp"
+                    android:layout_height="48dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:fontFamily="@font/semibold"
+                    android:textSize="20dp"
+                    android:text="CƠ SỞ PHÂN PHỐI"
+                    android:textColor="#FFF"
+                    android:layout_toRightOf="@+id/imgPill3"
+                    android:layout_height="wrap_content"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:background="@drawable/bg_note"
+                android:layout_margin="20dp"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/imgPill4"
+                    android:layout_width="48dp"
+                    android:src="@drawable/ic_money"
+                    android:layout_margin="10dp"
+                    android:layout_height="48dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:fontFamily="@font/semibold"
+                    android:textSize="20dp"
+                    android:textColor="#FFF"
+                    android:text="CƠ SỞ KINH DOANH"
+                    android:layout_toRightOf="@+id/imgPill4"
+                    android:layout_height="wrap_content"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+</RelativeLayout>

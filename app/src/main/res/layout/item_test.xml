@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingEnd="20dp"
+        android:paddingVertical="2dp"
+        android:background="@drawable/bg_actionbar"
+        android:text="A"
+        android:gravity="end"
+        android:textColor="#FFFCFC"
+        android:textSize="14sp"
+        android:id="@+id/mSection"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="20dp"
+        android:paddingVertical="5dp"
+        android:orientation="horizontal">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_centerVertical="true"
+            android:id="@+id/imgPill"
+            android:src="@drawable/ic_account"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="15dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/imgPill"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvNamePill"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:maxEms="20"
+                android:textColor="#F8EFEF"
+                android:textSize="14sp"
+                android:fontFamily="@font/bold"
+                android:text="Paracetamol"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:maxEms="20"
+                android:layout_marginTop="4dp"
+                android:id="@+id/tvCompany"
+                android:textSize="14sp"
+                android:textColor="#FF9800"
+                android:text="Cty CP Dược Phẩm Hà Nam"/>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

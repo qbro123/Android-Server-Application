@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/view1"
+        android:layout_width="wrap_content"
+        android:layout_margin="5dp"
+        android:padding="5dp"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imgView"
+            android:background="@drawable/bg_item"
+            android:layout_width="80dp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_height="65dp"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="5dp"
+        android:orientation="vertical"
+        android:layout_toRightOf="@+id/view1"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:textSize="15sp"
+            android:maxLines="1"
+            android:fontFamily="@font/semibold"
+            android:ellipsize="end"
+            android:maxEms="20"
+            android:text="sssssssssssssssssssssssssssss"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/tvNote"
+            android:layout_width="match_parent"
+            android:fontFamily="@font/medium"
+            android:textSize="11sp"
+            android:maxLines="3"
+            android:ellipsize="end"
+            android:maxEms="20"
+            android:text="Đây là đoạn text để test cái mình viết vào đây. Không có gì để nói hết các bạn à. Các bạn có muốn mình tiế tục viết hay là không. Nhứ comment cho mình biết nhé hihih"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

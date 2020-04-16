@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">Drugbank</string>
+    <string name="name_app">DRUGBANK</string>
+    <string name="text_home">Trang chủ</string>
+    <string name="news_example">Đài NHK giới thiệu ý kiến chuyên gia giải đáp câu hỏi của thính giả về vi-rút corona chủng mới. Câu hỏi hôm nay là thuốc Avigan hiệu quả ra sao.r r Thuốc Avigan, còn được biết đến với tên là Favipiravir, là loại thuốc chữa cúm do một công ty dược phẩm của Nhật Bản phát triển cách đây 6 năm. Thử nghiệm trên động vật trong phòng thí nghiệm cho thấy có tác dụng phụ nên chính phủ Nhật không phê chuẩn sử dụng thuốc này đối với 1 số đối tượng, ví dụ như phụ nữ mang thai. Thuốc Avigan giờ sẽ được chỉ định dùng cho một số trường hợp bệnh nhân nhiễm vi-rút corona chủng mới, nhưng chỉ trong những trường hợp được chính phủ cho phép.r r Tính đến nay, chưa có loại thuốc khác có hiệu quả trong điều trị bệnh nhân nhiễm vi-rút corona chủng mới, tuy nhiên thuốc Avigan được kỳ vọng là sẽ kháng được vi-rút corona chủng mới, vốn nhân bản tương tự vi-rút cúm. Nhiều nơi trên thế giới đang nghiên cứu về tác dụng của loại thuốc này.r r Chính phủ Trung Quốc thông báo kết quả thử nghiệm lâm sàng được tiến hành tại 2 cơ sở y tế. Một cơ sở ở thành phố Thâm Quyến, tỉnh Quảng Đông có 80 bệnh nhân. Các bệnh nhân được chỉ định điều trị bằng thuốc Avigan mất trung bình 4 ngày để kết quả xét nghiệm từ dương tính trở thành âm tính với vi-rút. Thời gian này ở bệnh nhân không dùng thuốc Avigan là 11 ngày. Kết quả chụp X-quang cho thấy, tình trạng phổi của 91% bệnh nhân điều trị bằng Avigan có tiến triển, trong khi tỷ lệ này ở nhóm bệnh nhân còn lại là 62%.r r Chính phủ Trung Quốc thông báo rằng dựa vào kết quả trên, họ quyết định chính thức đưa thuốc Avigan vào danh sách các loại thuốc điều trị cho bệnh nhân nhiễm vi-rút corona chủng mới.r r Tại Nhật Bản, thử nghiệm lâm sàng đối với 80 bệnh nhân có triệu chứng nhẹ hoặc không có triệu chứng đang được tiến hành tại các cơ sở y tế như Bệnh viện Y tế Fujita ở tỉnh Aichi, từ tháng 3 vừa qua. Các nhà nghên cứu đang so sánh tác động giảm lượng vi-rút của loại thuốc này.r r Công ty Nhật Bản sản xuất thuốc Avigan thông báo đã bắt đầu các thử nghiệm lâm sàng để được chính phủ phê chuẩn. Nếu hiệu quả và độ an toàn của loại thuốc này được xác nhận, công ty dự kiến nộp đơn xin chính phủ thông qua.r r (Thông tin được cập nhật đến ngày 6/4).</string>
+    <string name="gi_i_p_v_vi_r_t_corona_ch_ng_m_i_thu_c_avigan_hi_u_qu_ra_sao">Giải đáp về vi-rút corona chủng mới: Thuốc Avigan hiệu quả ra sao?</string>
+    <string name="todo">TODO</string>
+    <string name="minh_anh_04_11_2020">Minh Anh | 04/11/2020</string>
+    <string name="logo">Logo</string>
+    <string name="details">Chi tiết</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="login_success">Đăng nhập thành công!!</string>
+    <string name="pwd_fail">Mật khẩu bạn nhập vào không đúng</string>
+    <string name="pwd_not_found">Tài khoản của bạn không có trong hệ thống!</string>
+    <string name="error">"Error: "</string>
+    <string name="status_true">true</string>
+    <string name="psw_fail_en">Password is incorrect</string>
+    <string name="create_account_new">Tạo tài khoản mới</string>
+    <string name="fullname">Họ và tên:</string>
+    <string name="username">Tên tài khoản:</string>
+    <string name="pwd">Mật khẩu</string>
+    <string name="re_pwd">Nhập lại mật khẩu</string>
+    <string name="btn_register">ĐĂNG KÝ</string>
+    <string name="if_i_have_account">Nếu đã có tài khoản?</string>
+    <string name="login">" Đăng nhập"</string>
+    <string name="cant_connect_to_server">Không thể kết nối tới server! Thử lại sau</string>
+    <string name="login_text">Đăng nhập \n Ngân hàng thuốc Việt</string>
+    <string name="forget_pass">Quên mật khẩu</string>
+    <string name="register_text">Đăng ký </string>
+    <string name="account_free">tài khoản miễn phí</string>
+    <string name="please_check_validate_form">Vui lòng nhập đủ thông tin</string>
+</resources>

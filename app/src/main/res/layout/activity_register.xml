@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".screens.RegisterActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/view0"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imgView"
+            android:layout_width="100dp"
+            android:src="@drawable/ic_logo"
+            android:layout_centerHorizontal="true"
+            android:layout_height="100dp"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="@string/name_app"
+            android:fontFamily="@font/bold"
+            android:textSize="20sp"
+            android:layout_below="@+id/imgView"
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/text1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/regular"
+            android:textSize="20sp"
+            android:paddingBottom="10dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:text="@string/create_account_new"/>
+
+        <LinearLayout
+            android:id="@+id/view2"
+            android:layout_below="@+id/text1"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginVertical="10dp"
+            android:layout_height="wrap_content">
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:hint="@string/fullname"
+                app:hintTextColor="@color/colorPrimary"
+
+                android:textColorHint="@color/colorPrimary"
+                android:layout_height="wrap_content">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/edtFullname"
+                    android:textSize="16sp"
+                    android:backgroundTint="#928E8E"
+                    android:fontFamily="@font/medium"
+                    tools:ignore="UnusedAttribute" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:hint="@string/username"
+                app:hintTextColor="@color/colorPrimary"
+                android:textColorHint="@color/colorPrimary"
+                android:layout_height="wrap_content">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/edtUsername"
+                    android:textSize="16sp"
+                    android:backgroundTint="#928E8E"
+                    android:fontFamily="@font/medium"
+                    tools:ignore="UnusedAttribute" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:hint="@string/pwd"
+                app:hintTextColor="@color/colorPrimary"
+                android:textColorHint="@color/colorPrimary"
+                app:passwordToggleEnabled="true"
+                android:layout_height="wrap_content">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:id="@+id/edtPassword"
+                    android:textSize="16sp"
+                    android:backgroundTint="#928E8E"
+                    android:fontFamily="@font/medium"
+                    tools:ignore="UnusedAttribute" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:hint="@string/re_pwd"
+                app:passwordToggleEnabled="true"
+                app:hintTextColor="@color/colorPrimary"
+                android:textColorHint="@color/colorPrimary"
+                android:layout_height="wrap_content">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:id="@+id/edtRePassword"
+                    android:textSize="16sp"
+                    android:backgroundTint="#928E8E"
+                    android:fontFamily="@font/medium"
+                    tools:ignore="UnusedAttribute" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnRegister"
+            android:layout_width="150dp"
+            android:text="@string/btn_register"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/radius_button"
+            android:layout_below="@+id/view2"
+            android:layout_height="40dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_margin="20dp"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content"
+            tools:ignore="UselessParent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:text="@string/if_i_have_account"/>
+            <TextView
+                android:id="@+id/tvLogin"
+                android:layout_width="wrap_content"
+                android:textColor="@android:color/holo_orange_dark"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:text="@string/login"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ProgressBar
+        android:layout_alignParentBottom="true"
+        android:id="@+id/idProgress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:indeterminateDrawable="@drawable/indeterminate_progress"
+        android:indeterminate="true"
+        android:indeterminateDuration="3000"
+        android:indeterminateBehavior="repeat"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"/>
+
+</RelativeLayout>
