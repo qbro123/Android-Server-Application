@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".screens.EditAccountActivity">
+    <RelativeLayout
+        android:id="@+id/vieww"
+        android:layout_width="match_parent"
+        android:minHeight="?actionBarSize"
+        android:layout_height="?actionBarSize">
+
+        <TextView
+            android:id="@+id/tvNameBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Thay đổi tài khoản"
+            android:paddingVertical="10dp"
+            android:paddingHorizontal="20dp"
+            android:textSize="22sp"
+            android:fontFamily="@font/medium"/>
+
+        <TextView
+            android:id="@+id/tvBack"
+            android:layout_width="wrap_content"
+            android:text="Trở lại"
+            android:fontFamily="@font/bold"
+            android:textSize="16sp"
+            android:gravity="center_vertical"
+            android:layout_alignParentRight="true"
+            android:layout_margin="10dp"
+            android:layout_centerVertical="true"
+            android:layout_height="28dp"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_below="@+id/vieww"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:padding="10dp"
+            android:layout_marginVertical="16dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="150dp"
+                android:layout_height="150dp">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:src="@drawable/ic_edit_image_24dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_height="wrap_content"/>
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/imgAccount"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"/>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            app:hintTextColor="@color/colorPrimary"
+            android:hint="@string/username"
+            android:textColorHint="@color/colorPrimary"
+            android:layout_height="wrap_content">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:text="qbro123"
+                android:id="@+id/tvUsername"
+                android:textSize="16sp"
+                android:backgroundTint="#928E8E"
+                android:fontFamily="@font/medium"
+                tools:ignore="UnusedAttribute" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            app:hintTextColor="@color/colorPrimary"
+            android:hint="@string/text_fullname"
+            android:textColorHint="@color/colorPrimary"
+            android:layout_height="wrap_content">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Trần Quốc Tuấn"
+                android:id="@+id/tvFullname"
+                android:textSize="16sp"
+                android:backgroundTint="#928E8E"
+                android:fontFamily="@font/medium"
+                tools:ignore="UnusedAttribute" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            app:hintTextColor="@color/colorPrimary"
+            android:hint="@string/text_email"
+            android:textColorHint="@color/colorPrimary"
+            android:layout_height="wrap_content">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="makuru9x@gmail.com"
+                android:id="@+id/tvEmail"
+                android:textSize="16sp"
+                android:backgroundTint="#928E8E"
+                android:fontFamily="@font/medium"
+                tools:ignore="UnusedAttribute" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            app:hintTextColor="@color/colorPrimary"
+            android:hint="@string/text_phone"
+            android:textColorHint="@color/colorPrimary"
+            android:layout_height="wrap_content">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="+84386161113"
+                android:id="@+id/tvPhone"
+                android:textSize="16sp"
+                android:backgroundTint="#928E8E"
+                android:fontFamily="@font/medium"
+                tools:ignore="UnusedAttribute" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <Button
+            android:id="@+id/btnChangeAccount"
+            android:layout_width="150dp"
+            android:layout_margin="16dp"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/btn_change"
+            android:background="@drawable/radius_button"
+            android:layout_height="40dp"/>
+    </LinearLayout>
+
+</RelativeLayout>

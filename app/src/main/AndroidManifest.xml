@@ -13,18 +13,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning">
-        <activity android:name=".screens.DetailsPillActivity"></activity>
+        <activity android:name=".screens.EditAccountActivity"></activity>
+        <activity android:name=".screens.DetailsPillActivity" />
         <activity android:name=".screens.RegisterActivity" />
         <activity android:name=".screens.DetailsNotificationActivity" />
-        <activity android:name=".screens.LoginActivity">
+        <activity android:name=".screens.LoginActivity"/>
+        <activity android:name=".screens.SearchActivity" />
+        <activity android:name=".screens.SplashActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
-        <activity android:name=".screens.SearchActivity" />
-        <activity android:name=".screens.SplashActivity" />
         <activity android:name=".MainActivity" />
     </application>
 

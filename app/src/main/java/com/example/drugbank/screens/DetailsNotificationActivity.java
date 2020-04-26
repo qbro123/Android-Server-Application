@@ -1,5 +1,6 @@
 package com.example.drugbank.screens;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
@@ -12,13 +13,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.example.drugbank.MainActivity;
 import com.example.drugbank.R;
 
 import static com.example.drugbank.config.Constant.URL_REQUEST;
 
-public class DetailsNotificationActivity extends AppCompatActivity {
-    ImageView imgNews;
+public class DetailsNotificationActivity extends AppCompatActivity implements View.OnClickListener{
+    ImageView imgNews,imgBack;
     TextView tvTitle, tvAuthorDate, tvNote;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -53,9 +53,18 @@ public class DetailsNotificationActivity extends AppCompatActivity {
     }
 
     private void initView() {
+        imgBack = findViewById(R.id.imgBack);
+        imgBack.setOnClickListener(this);
         imgNews = findViewById(R.id.imgNews);
         tvTitle = findViewById(R.id.tvTitle);
         tvAuthorDate = findViewById(R.id.tvAuthorDate);
         tvNote = findViewById(R.id.tvNote);
+    }
+
+    @Override
+    public void onClick(@NonNull View v) {
+        if(v.getId() == R.id.imgBack) {
+            finish();
+        }
     }
 }

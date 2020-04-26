@@ -23,6 +23,7 @@
             android:fontFamily="@font/medium"/>
 
         <ImageView
+            android:id="@+id/imgSearch"
             android:layout_width="28dp"
             android:src="@drawable/ic_search_black_24dp"
             android:layout_alignParentRight="true"

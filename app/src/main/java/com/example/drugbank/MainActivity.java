@@ -17,9 +17,10 @@ import android.os.Handler;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-
+import com.example.drugbank.screens.SearchActivity;
 import com.example.drugbank.controllers.BottomNavBehavior;
 import com.example.drugbank.fragments.AccountFragment;
 import com.example.drugbank.fragments.HomeFragment;
@@ -28,6 +29,7 @@ import com.example.drugbank.fragments.PillFragment;
 import com.example.drugbank.models.Account;
 import com.example.drugbank.models.ItemSlider;
 import com.example.drugbank.models.Pill;
+import com.example.drugbank.screens.DetailsPillActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
@@ -38,6 +40,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     BottomNavigationView bottom_nav;
     FrameLayout layout_view;
     TextView tvNameBar;
+    ImageView imgSearch;
 
     @NonNull
     public static List<Account> accountList = new ArrayList<>();
@@ -70,6 +73,8 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         bottom_nav = findViewById(R.id.bottom_nav);
         layout_view = findViewById(R.id.addFragment);
         tvNameBar = findViewById(R.id.tvNameBar);
+        imgSearch = findViewById(R.id.imgSearch);
+        imgSearch.setOnClickListener(this);
     }
 
     @Override
@@ -77,18 +82,22 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         switch (menuItem.getItemId()) {
             case R.id.action_home:
                 tvNameBar.setText("Trang chủ");
+                imgSearch.setVisibility(View.VISIBLE);
                 loadFragment(new HomeFragment());
                 return true;
             case R.id.action_pill:
+                imgSearch.setVisibility(View.GONE);
                 tvNameBar.setText("Danh sách thuốc");
                 loadFragment(new PillFragment());
                 return true;
             case R.id.action_menu:
                 tvNameBar.setText("Danh mục");
+                imgSearch.setVisibility(View.VISIBLE);
                 loadFragment(new CategoryFragment());
                 return true;
             case R.id.action_account:
                 tvNameBar.setText("Tài khoản");
+                imgSearch.setVisibility(View.VISIBLE);
                 loadFragment(new AccountFragment());
                 return true;
         }
@@ -103,9 +112,9 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 
     @Override
     public void onClick(@NonNull View v) {
-        switch (v.getId()) {
-
-        }
+       if(v.getId() == R.id.imgSearch) {
+           startActivity(new Intent(getApplicationContext(), SearchActivity.class));
+       }
     }
 
     boolean doubleBackToExitPressedOnce = false;
@@ -122,12 +131,10 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 
         this.doubleBackToExitPressedOnce = true;
         Toast.makeText(this, "Click thêm lần nữa để thoát ứng dụng", Toast.LENGTH_SHORT).show();
-
         new Handler().postDelayed(new Runnable() {
 
             @Override
             public void run() {
-
                 doubleBackToExitPressedOnce=false;
             }
         }, 2000);

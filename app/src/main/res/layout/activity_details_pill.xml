@@ -51,6 +51,7 @@
                     android:background="@drawable/ic_account" />
 
                 <ImageView
+                    android:id="@+id/imgFavorite"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
@@ -58,7 +59,7 @@
                     android:src="@drawable/ic_favorite_none" />
 
                 <TextView
-                    android:id="@+id/tvFullname"
+                    android:id="@+id/tvNamePill"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_toRightOf="@+id/imgAccount"
@@ -67,10 +68,10 @@
                     android:textSize="22sp" />
 
                 <TextView
-                    android:id="@+id/tvEmail"
+                    android:id="@+id/tvCategoryPill"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/tvFullname"
+                    android:layout_below="@+id/tvNamePill"
                     android:layout_toRightOf="@+id/imgAccount"
                     android:background="@drawable/bg_item"
                     android:drawablePadding="5dp"
@@ -118,6 +119,7 @@
                     android:textSize="14sp" />
 
                 <TextView
+                    android:id="@+id/tvNumberPill"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/medium"
@@ -142,6 +144,7 @@
                     android:textSize="14sp" />
 
                 <TextView
+                    android:id="@+id/tvNamePill2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/medium"
@@ -165,6 +168,7 @@
                     android:textSize="14sp" />
 
                 <TextView
+                    android:id="@+id/tvCategoryPill2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/medium"
@@ -189,6 +193,7 @@
                     android:textSize="14sp" />
 
                 <TextView
+                    android:id="@+id/tvHL"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
@@ -236,6 +241,7 @@
                     android:textSize="14sp" />
 
                 <TextView
+                    android:id="@+id/tvTT"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/medium"
@@ -258,6 +264,7 @@
                     android:textSize="14sp" />
 
                 <TextView
+                    android:id="@+id/tvDBC"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/medium"
@@ -281,6 +288,7 @@
                     android:textSize="14sp" />
 
                 <TextView
+                    android:id="@+id/tvQCDG"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_toRightOf="@+id/QC"
@@ -305,6 +313,7 @@
                     android:textSize="14sp" />
 
                 <TextView
+                    android:id="@+id/tvCtySX"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_toRightOf="@+id/idSX"
@@ -329,6 +338,7 @@
                     android:textSize="14sp" />
 
                 <TextView
+                    android:id="@+id/tvCtyDK"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_toRightOf="@+id/idDK"
@@ -352,6 +362,7 @@
                     android:textSize="14sp" />
 
                 <TextView
+                    android:id="@+id/tvTCC"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/medium"
@@ -411,6 +422,7 @@
                     android:textSize="14sp" />
 
                 <TextView
+                    android:id="@+id/tvDVKK"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/medium"
@@ -433,6 +445,7 @@
                     android:textSize="14sp" />
 
                 <TextView
+                    android:id="@+id/tvDateKK"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/medium"
@@ -455,6 +468,7 @@
                     android:textSize="14sp" />
 
                 <TextView
+                    android:id="@+id/tvPricePill"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/medium"
@@ -477,6 +491,7 @@
                     android:textSize="14sp" />
 
                 <TextView
+                    android:id="@+id/tvDVT"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/medium"

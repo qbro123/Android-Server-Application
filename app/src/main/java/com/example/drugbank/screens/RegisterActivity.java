@@ -7,14 +7,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
-import com.example.drugbank.MainActivity;
 import com.example.drugbank.R;
 import com.example.drugbank.config.APIService;
 import com.example.drugbank.config.RetrofitClient;

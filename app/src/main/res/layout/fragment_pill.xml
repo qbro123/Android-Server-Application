@@ -2,26 +2,45 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_height="match_parent"
     tools:context=".fragments.PillFragment">
 
+  <com.google.android.material.textfield.TextInputLayout
+      android:layout_width="match_parent"
+      android:paddingHorizontal="20dp"
+      app:hintTextColor="@color/colorPrimary"
+      android:hint="Tìm kiếm"
+      android:textColorHint="@color/colorPrimary"
+      android:layout_height="wrap_content">
+    <com.google.android.material.textfield.TextInputEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:drawableLeft="@drawable/ic_search_black_24dp"
+        android:id="@+id/edtSearch"
+        android:textSize="16sp"
+        android:backgroundTint="#928E8E"
+        android:fontFamily="@font/medium"
+        tools:ignore="UnusedAttribute" />
+  </com.google.android.material.textfield.TextInputLayout>
+
   <RelativeLayout
       android:layout_width="match_parent"
-      android:paddingTop="10dp"
       android:paddingHorizontal="20dp"
       android:layout_height="wrap_content">
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:layout_width="24dp"
         android:layout_height="24dp"
-        android:id="@+id/imgAccount"
+        android:id="@+id/imgReload"
         android:layout_centerVertical="true"
         android:background="@drawable/ic_loop"
         android:layout_alignParentRight="true"/>
 
     <TextView
-        android:id="@+id/tvFullname"
+        android:id="@+id/tvNumPill"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Tổng số thuốc: 3000"
@@ -29,7 +48,7 @@
         android:fontFamily="@font/semibold"/>
     <TextView
         android:id="@+id/tvEmail"
-        android:layout_below="@+id/tvFullname"
+        android:layout_below="@+id/tvNumPill"
         android:drawablePadding="5dp"
         android:layout_width="match_parent"
         android:paddingBottom="10dp"
@@ -41,9 +60,22 @@
 
   </RelativeLayout>
 
-  <androidx.recyclerview.widget.RecyclerView
+
+  <RelativeLayout
       android:layout_width="match_parent"
-      android:id="@+id/rc_pill"
-      android:layout_height="match_parent"/>
+      android:layout_height="match_parent">
+    <com.github.ybq.android.spinkit.SpinKitView
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/spinKitView"
+        style="@style/SpinKitView.Small.Circle"
+        android:layout_centerVertical="true"
+        android:layout_height="wrap_content"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:id="@+id/rc_pill"
+        android:layout_height="match_parent"/>
+  </RelativeLayout>
+
 
 </LinearLayout>

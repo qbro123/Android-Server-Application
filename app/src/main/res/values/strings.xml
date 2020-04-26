@@ -31,4 +31,8 @@
     <string name="register_text">Đăng ký </string>
     <string name="account_free">tài khoản miễn phí</string>
     <string name="please_check_validate_form">Vui lòng nhập đủ thông tin</string>
+    <string name="text_email">Email</string>
+    <string name="text_fullname">Họ và tên:</string>
+    <string name="text_phone">Số điện thoại</string>
+    <string name="btn_change">Thay đổi</string>
 </resources>

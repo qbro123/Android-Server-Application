@@ -49,17 +49,7 @@ public class ChangePillAdapter extends RecyclerView.Adapter<ChangePillAdapter.Re
                 .fitCenter()
                 .error(R.drawable.ic_logo)
                 .into(holder.imgView);
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
-            @SuppressLint("SyntheticAccessor")
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(context.getApplicationContext(), DetailsPillActivity.class);
-                Bundle bundle = new Bundle();
-                bundle.putInt("position", position);
-                intent.putExtras(bundle);
-                context.startActivity(intent);
-            }
-        });
+
     }
 
     @Override

@@ -8,6 +8,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -17,9 +18,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.example.drugbank.R;
 import com.example.drugbank.config.APIService;
+import com.example.drugbank.config.RecyclerItemClickListener;
 import com.example.drugbank.config.RetrofitClient;
 import com.example.drugbank.controllers.ChangePillAdapter;
 import com.example.drugbank.controllers.NewPillAdapter;
@@ -27,7 +30,7 @@ import com.example.drugbank.controllers.NotificationAdapter;
 import com.example.drugbank.controllers.SliderAdapter;
 import com.example.drugbank.models.ItemSlider;
 import com.example.drugbank.models.Pill;
-import com.example.drugbank.screens.SearchActivity;
+import com.example.drugbank.screens.DetailsPillActivity;
 import com.github.ybq.android.spinkit.SpinKitView;
 import com.smarteist.autoimageslider.IndicatorAnimations;
 import com.smarteist.autoimageslider.SliderAnimations;
@@ -80,6 +83,17 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
         idNewPill.setLayoutManager(layoutManager1);
         idNewPill.setLayoutManager(HorizontalLayout);
         idNewPill.setAdapter(newPillAdapter);
+        idNewPill.addOnItemTouchListener(new RecyclerItemClickListener(getContext(), idNewPill, new RecyclerItemClickListener.OnItemClickListener() {
+            @SuppressLint("SyntheticAccessor")
+            @Override
+            public void onItemClick(@Nullable View view, int position) {
+                getPositionAndIntent(position);
+            }
+            @Override
+            public void onLongItemClick(@Nullable View view, int position) {
+
+            }
+        }));
     }
     private void setAdapter2() {
         ChangePillAdapter changePillAdapter = new ChangePillAdapter(getContext());
@@ -88,6 +102,18 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
         idNewEditPill.setLayoutManager(layoutManager2);
         idNewEditPill.setLayoutManager(HorizontalLayout2);
         idNewEditPill.setAdapter(changePillAdapter);
+        idNewEditPill.addOnItemTouchListener(new RecyclerItemClickListener(getContext(), idNewEditPill, new RecyclerItemClickListener.OnItemClickListener() {
+            @SuppressLint("SyntheticAccessor")
+            @Override
+            public void onItemClick(@Nullable View view, int position) {
+                getPositionAndIntent(position);
+            }
+
+            @Override
+            public void onLongItemClick(@Nullable View view, int position) {
+
+            }
+        }));
     }
     private void setAdapter3() {
         ChangePillAdapter changePillAdapter = new ChangePillAdapter(getContext());
@@ -96,6 +122,18 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
         idPillOut.setLayoutManager(layoutManager2);
         idPillOut.setLayoutManager(HorizontalLayout3);
         idPillOut.setAdapter(changePillAdapter);
+        idPillOut.addOnItemTouchListener(new RecyclerItemClickListener(getContext(), idPillOut, new RecyclerItemClickListener.OnItemClickListener() {
+            @SuppressLint("SyntheticAccessor")
+            @Override
+            public void onItemClick(@Nullable View view, int position) {
+                getPositionAndIntent(position);
+            }
+
+            @Override
+            public void onLongItemClick(@Nullable View view, int position) {
+
+            }
+        }));
     }
     private void setAdapter4() {
         NotificationAdapter notificationAdapter = new NotificationAdapter(getContext());
@@ -145,7 +183,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
 
                 @Override
                 public void onFailure(Call<List<Pill>> call, Throwable t) {
-                    Log.d("aaaaaaaaaaaaa","ddddddddddddddd");
+                    Toast.makeText(getContext(), "Can't connecting server, reconnecting...", Toast.LENGTH_SHORT).show();
                 }
             });
             apiService.getProduct().enqueue(new Callback<List<Pill>>() {
@@ -163,7 +201,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
             }
             @Override
             public void onFailure(@NonNull Call<List<Pill>> call, @NonNull Throwable t) {
-                Log.d("sssssssss", "ssssssssss");
+                Toast.makeText(getContext(), "Can't connecting server, reconnecting...", Toast.LENGTH_SHORT).show();
             }
 
         });
@@ -193,9 +231,14 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
     }
 
     @Override
-    public void onClick(View v) {
-        switch (v.getId()) {
+    public void onClick(@Nullable View v) {
 
-        }
+    }
+    private void getPositionAndIntent(int position) {
+        Intent intent = new Intent(getContext(), DetailsPillActivity.class);
+        Bundle bundle = new Bundle();
+        bundle.putInt("position", position);
+        intent.putExtras(bundle);
+        startActivity(intent);
     }
 }
